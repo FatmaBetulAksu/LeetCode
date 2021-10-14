@@ -1,0 +1,15 @@
+// https://leetcode.com/problems/climbing-stairs/
+
+class Solution {
+    public int climbStairs(int n) {
+        int pre, next;
+        pre=1;
+        next=1;
+        for(int i=0;i<n-1;i++){
+            int temp=next;
+            next+=pre;
+            pre=temp;
+        }
+        return next;
+    }
+}
